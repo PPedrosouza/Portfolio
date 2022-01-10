@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  /*cor variável*/
+  --purple: hsla(285, 98%, 50%, 1);
+  --white: hsl(240, 33%, 99%, 1);
+  --blue-dark: hsla(237, 100%, 9%, 1);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.wrapper {
+  position: absolute;
+  width: 1440px;
+  height: 100px;
+  margin: 0 auto;
+  color: var(--purple);
+}
