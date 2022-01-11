@@ -6,7 +6,9 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  
+  <title>{ Pedro Olegário }</title>
+  <link rel="icon" type="imagem/png" href="./assets/images/teclado.png" />
 
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -23,21 +25,92 @@
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
-          <ul class="nav-list">
-          <li>
-            <a href="#">About ::after</a>
-          </li>
-          <li>
-            <a href="#">Projects ::after</a>
-          </li>
-          <li>
-            <a href="#">Contact ::after</a>
-          </li>
-          </ul>
         </div>
+        <ul class="nav-list">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projetos">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <div class="container-primary max-width">
+        <section class="container-primary--title">
+          <p class="gray-dark">The best</p>
+          <h1 class="white-gradient">Hello, Word!</h1>
+        </section>
+        <section class="container-primary--logo">
+          <img src="./assets/images/logo.svg" alt="Logo Pedro Olegario">
+        </section>
+      </div>
+      <div class="container-background-light" id="about">
+        <div class="container-secondary max-width">
+          <section class="container-seconday--informations">
+            <p class="gray-light">Hello, I am</p>
+            <h3>Pedro Olegário</h3>
+            <p class="gray-light">pronoums: rock/roll</p>
+          </section>
+          <section class="container-seconday--aboutme">
+            <h1>About me</h1>
+            <div>
+              <p>I'm studying in
+                <span class="blue-dark">Information of Systems</span>
+                in Centro Universitário Adventista de São Paulo college.
+              </p>
+              <p>Currently I develop in 
+                <span class="blue-dark">HTML, CSS, a little bit of JavaScript, MySQL, SQL</span>
+                and I pretend to improve in both and the next step is: 
+                <span class="blue-dark">PHP & Mongo DB</span>.
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- PAREI AQUI: ABAIXO-->
+      <div class="container-tertiary max-width" id="projects">
+        <div class="container-tertiary--title">
+          Projects
+        </div>
+        <section class="container-tertiary--moon">
+          <img src="./assets/images/moon.svg" alt="Moon image">
+        </section>
+        <section>
+          <nav class="max-width">
+            <ul class="nav-list--projectsLinks">
+              <li class="project">
+                <h3>Title</h3>
+                <img src="./assets/images/Ellipse-1.svg" alt="Moon Fase Image">
+                <img src="./assets/images/github-white.svg" alt="Github Logo">
+                <h3>soon</h3>
+              </li>
+              <li class="project">
+                <h3>Title</h3>
+                <a href="">
+                  <img src="" alt="">
+                </a>
+                <img src="./assets/images/github-white.svg" alt="Github Logo">
+                <h3>soon</h3>
+              </li> 
+              <li class="project">
+                <h3>Title</h3>
+                <img src="./assets/images/Ellipse-3.svg" alt="Moon Fase Image">
+                <img src="./assets/images/github-white.svg" alt="Github Logo">
+                <h3>soon</h3>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </main>
+    <footer class="container-background-light" id="contact"></footer>
   </div>
+
+
 </body>
 </html>
