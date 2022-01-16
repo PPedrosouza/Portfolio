@@ -8,4 +8,4 @@
 <h3> This project was my baby step in frontend development and I so, so happy to make that happen 😄</h3>
 
 # Credits
-<h3> Project inspired by @iuricode and code based by @GabrielSampaio7</h3>
+<h3> Project inspired by @iuricode</h3>
