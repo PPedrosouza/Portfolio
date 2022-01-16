@@ -17,6 +17,7 @@ body {
   --fasemoon2: linear-gradient(90deg, #C4C4C4 1.04%, #FFFFFF 52.08%, #C4C4C4 100%);
   --fasemoon3: linear-gradient(90deg, rgba(196, 196, 196, 0) 0.07%, #FFFFFF 79.76%);
   --soon: linear-gradient(90deg, #32BF84 0%, #BE03FD 100%);
+  --gray: hsla(0, 0%, 90%, 1);
   --gray-dark: hsla(203, 11%, 39%, 1);
   --gray-ligth: hsla(0, 0%, 90%, 1);
   --gray-medium: hsla(240, 7%, 78%, 1);
@@ -40,6 +41,23 @@ body {
   overflow-wrap: break-word;
   height: 100vh;
 }
+
+body::-webkit-scrollbar {
+  width: 5px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--blue-dark);
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  /* color of the scroll thumb */
+  background-color: var(--gray-medium);
+  border-radius: 6px;
+}
+
 
 h1,
 h2,
@@ -116,13 +134,39 @@ header .max-width .nav-list li {
 }
 
 header .max-width .nav-list li a {
-  color: var(--white);
+  color: var(--gray);
   font-size: 1rem;
   position: relative;
 }
 
+header .max-width .nav-list li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 10px;
+  left: 0;
+  background: -webkit-gradient(linear, right top, left top, from(#6610f2), to(#17161d));
+  background: linear-gradient(270deg, #FFFFFF 0%, #32BF84 100%);
+  -webkit-transform-origin: bottom right;
+  transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+header .max-width .nav-list li a:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+
 header .max-width .nav-list li a:hover {
-  color: var(--blue-dark);
+  color: var(--white);
 }
 
 .nav-title {
@@ -212,7 +256,7 @@ main {
 }
 
 .gradient h1 {
-  background-image: linear-gradient(to right, #32BF84, #BE03FD);
+  background-image: linear-gradient(to right, #FFFFFF, #C4C4C4);
   color: var(--white);
   background-clip: text;
   -webkit-background-clip: text;
@@ -412,21 +456,6 @@ main {
 
 .project .circle3:hover {
   transform: scale(1.2);
-}
-
-.nav-list--projectsLinks h3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28.3396px;
-  line-height: 43px;
-  color: var(--gray-medium);
-  /* identical to box height */
-
-  letter-spacing: 0.03em;
 }
 
 .nav-list--projectsLinks a {
